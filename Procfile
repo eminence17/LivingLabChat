@@ -1,1 +1,1 @@
-web: gunicorn LivingLabChat.wsgi
+web: gunicorn -k gevent -w 1 LivingLabChat.wsgi

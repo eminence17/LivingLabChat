@@ -15,7 +15,7 @@ from django.http import HttpResponse
 import socketio
 
 # basedir = os.path.dirname(os.path.realpath(__file__))
-sio = socketio.Server(cors_allowed_origins="*", async_mode=async_mode)
+sio = socketio.Server(cors_allowed_origins="*", async_mode="gevent")
 thread = None
 
 @api_view(['GET'])
