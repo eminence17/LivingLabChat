@@ -1,11 +1,11 @@
 async_mode = None
 
-from rest_framework.views import APIView
-from rest_framework.response import Response
+# from rest_framework.views import APIView
+# from rest_framework.response import Response
 from .serializers import RoomSerializer, MessageSerializer
 from .models import Room, Message
-from rest_framework.status import HTTP_200_OK, HTTP_400_BAD_REQUEST
-from rest_framework.decorators import api_view
+# from rest_framework.status import HTTP_200_OK, HTTP_400_BAD_REQUEST
+# from rest_framework.decorators import api_view
 from django.db.models import Q
 
 
@@ -18,7 +18,7 @@ import socketio
 sio = socketio.Server(cors_allowed_origins="*", async_mode="gevent")
 thread = None
 
-@api_view(['GET'])
+# @api_view(['GET'])
 def index(request):
     global thread
     if thread is None:
